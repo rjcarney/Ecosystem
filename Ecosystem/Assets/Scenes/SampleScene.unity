@@ -339,8 +339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae248db1f9ea0c46a69f90d9fa9a056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapWidth: 10
-  mapHeight: 10
+  mapWidth: 20
+  mapHeight: 20
+  waterChance: 0.25
 --- !u!4 &2121398632
 Transform:
   m_ObjectHideFlags: 0
@@ -368,3 +369,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 4933208565498484960, guid: 15ef9f311cebe534896640e21e686c5d, type: 3}
+  grassMat: {fileID: 2100000, guid: 25895f8439d8ab648b7fa92f8c703de4, type: 2}
+  waterMat: {fileID: 2100000, guid: 764f4ff40cb39ab469546417cb87755f, type: 2}

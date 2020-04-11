@@ -10,7 +10,7 @@ public class MapGenerator : MonoBehaviour
 
     private TileGenerator tileGen;
 
-    public GameObject CreateMap(int width, int height) {
+    public GameObject CreateMap(int width, int height, float waterChance) {
         GameObject map = new GameObject("Map");
         
         this.width = width;
@@ -18,7 +18,7 @@ public class MapGenerator : MonoBehaviour
 
         for (int x = 0; x < this.width; x++) {
             for (int z = 0; z < this.height; z++) {
-                GameObject mapTile = tileGen.CreateTile(x, z);
+                GameObject mapTile = tileGen.CreateTile(x, z, waterChance);
                 mapTile.transform.parent = map.transform;
             }
         }

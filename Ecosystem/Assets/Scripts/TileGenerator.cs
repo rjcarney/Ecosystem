@@ -9,10 +9,19 @@ public class TileGenerator : MonoBehaviour
     private int x;
     private int z;
 
-    public GameObject CreateTile(int x, int z) {
+    private bool isLand;
+    public Material grassMat;
+    public Material waterMat;
+
+    public GameObject CreateTile(int x, int z, float waterChance) {
+        GameObject mapTile = Instantiate(tile, new Vector3(x * 2, 0, z * 2), Quaternion.identity);
         this.x = x;
         this.z = z;
-        return Instantiate(tile, new Vector3(x*2, 0, z*2), Quaternion.identity);
+
+        this.isLand = (Random.Range(0f, 1f) < waterChance) ? false : true;
+        mapTile.GetComponent<MeshRenderer>().material = isLand ? grassMat : waterMat;
+
+        return mapTile;
     }
 
     // Start is called before the first frame update
