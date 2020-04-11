@@ -20,6 +20,7 @@ public class TileGenerator : MonoBehaviour
 
         this.isLand = (Random.Range(0f, 1f) < waterChance) ? false : true;
         mapTile.GetComponent<MeshRenderer>().material = isLand ? grassMat : waterMat;
+        mapTile.tag = isLand ? "Land" : "Water";
 
         return mapTile;
     }
