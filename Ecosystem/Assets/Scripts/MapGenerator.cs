@@ -46,6 +46,22 @@ public class MapGenerator : MonoBehaviour
         return mapTile;
     }
 
+    public GameObject[] SpawnAnimal(int animalCount,GameObject animal, GameObject[,] mapMatrix) {
+        GameObject[] animals = new GameObject[animalCount];
+        for(int a = 0; a < animalCount; a++) {
+            int x = Random.Range(0, this.getWidth());
+            int z = Random.Range(0, this.getHeight());
+            while(mapMatrix[x, z].GetComponent<Tile>().isOccupied() || !mapMatrix[x, z].GetComponent<Tile>().isLand()) {
+                x = Random.Range(0, this.getWidth());
+                z = Random.Range(0, this.getHeight());
+            }
+            GameObject newAnimal = Instantiate(animal, new Vector3(x * 2, animal.transform.position.y, z * 2), Quaternion.identity);
+            newAnimal.transform.parent = mapMatrix[x, z].transform;
+            animals[a] = newAnimal;
+        }
+        return animals;
+    }
+
     public int getWidth() { return this.width; }
     public int getHeight() { return this.height; }
 

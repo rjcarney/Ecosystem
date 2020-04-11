@@ -13,11 +13,15 @@ public class GameManager : MonoBehaviour
     public float waterChance;
 
     public GameObject rabbit;
-    public int rabitCount;
+    public int rabbitCount;
+    private GameObject[] rabbits;
 
-    public GameObject[,] GenerateMap() {
-        mapGen = gameObject.GetComponent<MapGenerator>();
+    public GameObject[,] GenerateMap(MapGenerator mapGen) {
         return mapGen.CreateMap(mapWidth, mapHeight, waterChance);
+    }
+
+    public GameObject[] AnimalSpawner(int specieCount, GameObject specie) {
+        return mapGen.SpawnAnimal(specieCount, specie, this.map);
     }
 
     void Awake() {
@@ -33,7 +37,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.map = GenerateMap();
+
+        this.mapGen = gameObject.GetComponent<MapGenerator>();
+        this.map = GenerateMap(mapGen);
+        this.rabbits = AnimalSpawner(this.rabbitCount, this.rabbit);
     }
 
     // Update is called once per frame
