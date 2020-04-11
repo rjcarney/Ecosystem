@@ -8,24 +8,29 @@ public class MapGenerator : MonoBehaviour
     private int width;
     private int height;
 
-    public GameObject tile;
+    private TileGenerator tileGen;
 
-    public void CreateMap(int width, int height) {
+    public GameObject CreateMap(int width, int height) {
+        GameObject map = new GameObject("Map");
+        
         this.width = width;
         this.height = height;
 
         for (int x = 0; x < this.width; x++) {
             for (int z = 0; z < this.height; z++) {
-                Instantiate(tile, new Vector3(x*2, 0, z*2), Quaternion.identity);
+                GameObject mapTile = tileGen.CreateTile(x, z);
+                mapTile.transform.parent = map.transform;
             }
         }
+
+        return map;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        tileGen = gameObject.GetComponent<TileGenerator>();
+
     }
 
     // Update is called once per frame

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         mapGen = gameObject.GetComponent<MapGenerator>();
-        mapGen.CreateMap(mapWidth, mapHeight);
+        GameObject map = mapGen.CreateMap(mapWidth, mapHeight);
     }
 
     // Update is called once per frame
