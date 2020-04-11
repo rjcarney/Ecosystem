@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9149603781953735255}
   - component: {fileID: 9149603781953735256}
   - component: {fileID: 9149603781953735257}
-  - component: {fileID: 9149603781953735254}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,6 +47,8 @@ MonoBehaviour:
   mapWidth: 20
   mapHeight: 20
   waterChance: 0.2
+  rabbit: {fileID: 1115346038830892, guid: 3f9dcd6bf73fe2f40806fb0074f456c4, type: 3}
+  rabitCount: 5
 --- !u!114 &9149603781953735257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,18 +59,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde401729b231c845a00c3df53056966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9149603781953735254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149603781953735258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eafb0c432e7a6d149a2ad428dc850725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 4933208565498484960, guid: 15ef9f311cebe534896640e21e686c5d, type: 3}
