@@ -36,13 +36,15 @@ public class MapGenerator : MonoBehaviour
         tileSettings.setX(x);
         tileSettings.setZ(z);
 
-        if (Random.Range(0f, 1f) < waterChance)
+        if (Random.Range(0f, 1f) < waterChance) {
             tileSettings.setWater();
-        else
+            mapTile.GetComponent<MeshRenderer>().material = waterMat;
+            mapTile.tag = "Water";
+        } else {
             tileSettings.setLand();
-
-        mapTile.GetComponent<MeshRenderer>().material = tileSettings.isLand() ? grassMat : waterMat;
-        mapTile.tag = tileSettings.isLand() ? "Land" : "Water";
+            mapTile.GetComponent<MeshRenderer>().material = grassMat;
+            mapTile.tag = "Land";
+        }
 
         return mapTile;
     }

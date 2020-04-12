@@ -361,6 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4356657072410053124}
   - component: {fileID: 4410868884671371864}
+  - component: {fileID: 2083887856163756155}
   m_Layer: 0
   m_Name: Rabbit 1
   m_TagString: Untagged
@@ -404,6 +405,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2083887856163756155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350704533082609960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482eae6e0c8e8db4aabaddaf1074cc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHunger: 100
+  maxThirst: 100
+  hungerIncreaseRate: 0.8
+  thirstIncreaseRate: 0.6
+  lifespan: 50
 --- !u!1 &4350850578291213516
 GameObject:
   m_ObjectHideFlags: 0
