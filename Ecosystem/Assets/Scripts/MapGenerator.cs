@@ -31,7 +31,7 @@ public class MapGenerator : MonoBehaviour
     }
 
     public GameObject CreateTile(int x, int z, float waterChance) {
-        GameObject mapTile = Instantiate(tile, new Vector3(x * 2, 0, z * 2), Quaternion.identity);
+        GameObject mapTile = Instantiate(tile, new Vector3(x * tile.transform.localScale.x, 0, z * tile.transform.localScale.z), Quaternion.identity);
         Tile tileSettings = mapTile.GetComponent<Tile>();
         tileSettings.setX(x);
         tileSettings.setZ(z);
@@ -40,6 +40,7 @@ public class MapGenerator : MonoBehaviour
             tileSettings.setWater();
         else
             tileSettings.setLand();
+
         mapTile.GetComponent<MeshRenderer>().material = tileSettings.isLand() ? grassMat : waterMat;
         mapTile.tag = tileSettings.isLand() ? "Land" : "Water";
 
