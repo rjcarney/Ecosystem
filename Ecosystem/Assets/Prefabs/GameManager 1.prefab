@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9149603781953735258
+--- !u!1 &1465872870555744420
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9149603781953735255}
-  - component: {fileID: 9149603781953735256}
-  - component: {fileID: 9149603781953735257}
+  - component: {fileID: 1465872870555744425}
+  - component: {fileID: 1465872870555744422}
+  - component: {fileID: 1465872870555744423}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManager 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9149603781953735255
+--- !u!4 &1465872870555744425
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149603781953735258}
+  m_GameObject: {fileID: 1465872870555744420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9149603781953735256
+--- !u!114 &1465872870555744422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149603781953735258}
+  m_GameObject: {fileID: 1465872870555744420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ae248db1f9ea0c46a69f90d9fa9a056, type: 3}
@@ -47,15 +47,15 @@ MonoBehaviour:
   mapWidth: 20
   mapHeight: 20
   waterChance: 0.2
-  rabbit: {fileID: 1115346038830892, guid: 3f9dcd6bf73fe2f40806fb0074f456c4, type: 3}
-  rabitCount: 5
---- !u!114 &9149603781953735257
+  rabbit: {fileID: 4350704533082609960, guid: 050dddf6506fe17468fedc2d106b961e, type: 3}
+  rabbitCount: 5
+--- !u!114 &1465872870555744423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9149603781953735258}
+  m_GameObject: {fileID: 1465872870555744420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde401729b231c845a00c3df53056966, type: 3}

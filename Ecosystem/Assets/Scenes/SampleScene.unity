@@ -362,7 +362,7 @@ PrefabInstance:
         type: 3}
       propertyPath: rabbit
       value: 
-      objectReference: {fileID: 2085572638122281054, guid: 5b9832ea698ab94469d630ab6af6ce74,
+      objectReference: {fileID: 4350704533082609960, guid: 050dddf6506fe17468fedc2d106b961e,
         type: 3}
     - target: {fileID: 9149603781953735256, guid: 31d80bd66036b4645a67da37b7d7aaff,
         type: 3}

@@ -58,6 +58,7 @@ public class MapGenerator : MonoBehaviour
             }
             GameObject newAnimal = Instantiate(animal, new Vector3(x * 2, animal.transform.position.y, z * 2), Quaternion.identity);
             newAnimal.transform.parent = mapMatrix[x, z].transform;
+            mapMatrix[x, z].GetComponent<Tile>().setOccupied(true);
             animals[a] = newAnimal;
         }
         return animals;
